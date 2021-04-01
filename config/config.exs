@@ -15,7 +15,8 @@ config :assignment, AssignmentWeb.Endpoint,
   url: [host: "localhost"],
   secret_key_base: "Zz/FULFiQGAElmPpxiMqNWLjCVQ+oVbOGmVaLj2BrL4l0eJ91UnCrfoGwHsBBO6u",
   render_errors: [view: AssignmentWeb.ErrorView, accepts: ~w(json)],
-  pubsub: [name: Assignment.PubSub, adapter: Phoenix.PubSub.PG2]
+  pubsub: [name: Assignment.PubSub, adapter: Phoenix.PubSub.PG2],
+  api_key: "aca64a2b2f45ecd13b1e5cfd89bd7f64"
 
 # Configures Elixir's Logger
 config :logger, :console,

@@ -7,9 +7,9 @@ defmodule AssignmentWeb.Api.Schmea do
 
 
     query do
-        field :weatherforecast, :weatherForecastType do
-            arg :latitude, :float
-            arg :longitude, :float
+        field :weatherforecast, :weather_forecast_type do
+            arg :latitude, non_null(:string)
+            arg :longitude, non_null(:string)
             resolve &Resolvers.get_weather/3
         end
     end

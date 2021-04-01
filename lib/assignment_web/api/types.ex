@@ -1,12 +1,12 @@
 defmodule AssignmentWeb.Api.Types do
     use Absinthe.Schema.Notation
 
-    object :weatherType do
+    object :weather_type do
         field :main, :string
         field :description, :string
     end
 
-    object :temperatureType do
+    object :temperature_type do
         field :day, :string
         field :min, :string
         field :max, :string
@@ -15,29 +15,29 @@ defmodule AssignmentWeb.Api.Types do
         field :morning, :string
     end
 
-    object :feelsLikeType do
+    object :feels_like_type do
         field :day, :string
         field :night, :string
         field :evening, :string
         field :morning, :string
     end
 
-    object :dailyType do
+    object :daily_type do
         field :date, :string
         field :pressure, :string
         field :humidity, :string
-        field :temperature, :temperatureType
-        field :feelsLike, :feelsLikeType
+        field :temperature, :temperature_type
+        field :feels_like, :feels_like_type
     end
     
-    object :weatherForecastType do
+    object :weather_forecast_type do
         field :date, :string
         field :sunrise, :string
         field :sunset, :string
         field :temperature, :string
-        field :feelsLike, :string
-        field :weather, :weatherType
-        field :daily, list_of(:dailyType)
+        field :feels_like, :string
+        field :weather, :weather_type
+        field :daily, list_of(:daily_type)
     end
 
 end
